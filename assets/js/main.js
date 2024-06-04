@@ -13,17 +13,18 @@ function spawnFirefly() {
     },
     { 
       top: '0vh', 
-      left: `${random(0, 100)}vw + Math.sin(Math.random() * 10) * 20`, 
+      left: `${random(0, 100)}vw`, 
       opacity: 1 
     },
     { 
       top: '0vh', 
-      left: `${random(0, 100)}vw + Math.cos(Math.random() * 10) * 20`, 
+      left: `${random(0, 100)}vw`, 
       opacity: 0 
     }
   ], {
     duration: 3000, // 3 seconds
-    easing: 'ease-out'
+    easing: 'ease-out',
+    fill: 'forwards' // Keep the final state
   });
 
   firefly.addEventListener('animationend', () => {
@@ -38,3 +39,4 @@ setInterval(spawnFirefly, 500); // Spawn every 0.5 seconds
 function random(min, max) {
   return Math.random() * (max - min) + min;
 }
+
