@@ -94,7 +94,7 @@ h4 {
   .homebutton {
     position: absolute;
     top: 70%;
-    left: 32%;
+    left: 34%;
     z-index: 999;
   }
 } /* tablet */
@@ -103,7 +103,7 @@ h4 {
   .homebutton {
     position: absolute;
     top: 70%;
-    left: 20%;
+    left: 23%;
     z-index: 999;
   }
 } /* Mobile*/
