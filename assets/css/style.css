@@ -6,6 +6,12 @@ p {
   color: #ffffff;
 }
 
+a {
+  font-family: "MuseoModerno", sans-serif;
+  text-decoration: none;
+  color: #c3cfe8;
+}
+
 h1 {
   font-family: "MuseoModerno", sans-serif;
   font-optical-sizing: auto;
