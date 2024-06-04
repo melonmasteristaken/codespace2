@@ -39,8 +39,10 @@ html {
 <a class="button homebutton" href="/start">[Start Experience]</a>
 <div class="fireflies"></div>
 
-Here is the HTML code:
-```
-<button id="soundtrack-button" data-soundtrack="starlight-night">
-  <span>Sound</span>
-</button>
+<div class="soundbutton" id="soundButton">
+  <i class="fas fa-play"></i>
+</div>
+<audio id="soundtrack" loop>
+  <source src="your-soundtrack.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
