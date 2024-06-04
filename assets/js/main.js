@@ -1,11 +1,5 @@
 //main.js
-// Check if a service worker is installed
-navigator.serviceWorker.getRegistrations().then(registrations => {
-  if (registrations.length > 0) {
-    // Show the modal notification
-    showOfflineNotification();
-  }
-});
+
 
 
 
@@ -33,6 +27,13 @@ const registerServiceWorker = async () => {
   }
 };
 
+// Check if a service worker is installed
+navigator.serviceWorker.getRegistrations().then(registrations => {
+  if (registrations.length > 0) {
+    // Show the modal notification
+    showOfflineNotification();
+  }
+});
 
 //------------------------------------------------------------------------------------------------------------
 
