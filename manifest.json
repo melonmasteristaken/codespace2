@@ -1,0 +1,28 @@
+{
+  "background_color": "#5f727c",
+  "description": "Luminous Parallax Wonderland",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Luminaura",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Luminaura",
+  "start_url": "/",
+  "theme_color": "#5f727c",
+  "icons": [
+    {
+      "src": "https://luminaura.github.io/assets/luminauraicon.png",
+      "type": "image/png",
+      "sizes": "446x446"
+    }
+  ],
+  "id": "1DSTLuminaura",
+  "lang": "en",
+  "display_override": [
+    "fullscreen",
+    "standalone",
+    "minimal-ui",
+    "window-controls-overlay",
+    "browser"
+  ]
+}
