@@ -118,5 +118,13 @@ h4 {
   }
 } /* Mobile*/
 
-
+@media (min-width: 1024px) and (max-width: 1440px) and (min-resolution: 100dpi) {
+  /* styles here will target laptops */
+  .homebutton {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    z-index: 999;
+  }
+}
 
