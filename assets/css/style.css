@@ -69,23 +69,23 @@ h4 {
 }
 
 .hometriangle {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 50px solid rgba(255, 255, 255, 0.7);
-    animation: animateTriangle 2s infinite;
-    margin: 0 auto;
-    display: block;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 30px solid rgba(255, 255, 255, 0.7);
+  animation: animateTriangle 1s infinite alternate;
+  margin: 0 auto;
+  display: block;
 }
 
 @keyframes animateTriangle {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(20px);
-    }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
 }
 
 /* --- --- ------------ --- --- */
