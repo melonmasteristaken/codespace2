@@ -3,7 +3,9 @@
 console.log("main.js active")
 
 
-//............................................................................................................
+
+//---
+
 
 
 
@@ -39,12 +41,15 @@ navigator.serviceWorker.getRegistrations().then(registrations => {
   }
 });
 
-//------------------------------------------------------------------------------------------------------------
+
+
+//---
+
 
 
 //firefly.js
 const fireflies = document.querySelector('.fireflies');
-
+console.log("noError5")
 function spawnFirefly() {
   const firefly = document.createElement('div');
   firefly.classList.add('firefly');
@@ -85,7 +90,9 @@ function random(min, max) {
 }
 
 
-//------------------------------------------------------------------------------------------------------------
+
+//---
+
 
 
 //offline-notification.js
@@ -102,7 +109,6 @@ function showOfflineNotification() {
 //window.addEventListener("load", showOfflineNotification);
 
 
-//------------------------------------------------------------------------------------------------------------
-
+//---
 
 //null.js
