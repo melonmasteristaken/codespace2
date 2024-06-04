@@ -30,8 +30,6 @@ html {
 }
 </style>
 
-<audio autoplay pointerdown loop><source src="/assets/sounds/starlight-night.mp3" type="audio/mpeg" /></audio>
-
 <bold><h1 style="text-align: center;">Luminaura</h1></bold>
 <p style="text-align: center;">Luminous Parallax Wonderland.</p>
 <small><p style="text-align: center;">By <a href="https://1d10t1c-stud10s.github.io">1D10T1C STUD10S</a></p></small>
@@ -40,3 +38,23 @@ html {
 
 <a class="button homebutton" href="/start">[Start Experience]</a>
 <div class="fireflies"></div>
+
+<audio id="background-audio" loop> 
+  <source src="assets/sounds/starlight-night.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById('background-audio');
+    var playPromise = audio.play();
+    
+    if (playPromise !== undefined) {
+      playPromise.then(function() {
+        console.log('Audio started successfully');
+      }).catch(function(error) {
+        console.log('Failed to start audio:', error);
+      });
+    }
+  });
+</script>
