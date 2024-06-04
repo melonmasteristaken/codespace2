@@ -3,18 +3,7 @@
 console.log("main.js active")
 
 //sounds
-window.onload = setInterval(GameLoop, 1000 / 10); //10fps
 
-let myAudio = new Audio();
-
-myAudio.src = 'https://luminaura.github.io/assets/sounds/starlight-night.mp3';
-
-function Gameloop() {
-    myAudio.play();
-    if (myAudio.paused == true) {
-        myAudio.play();
-    }
-}
 
 //---
 
