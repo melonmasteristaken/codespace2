@@ -8,17 +8,17 @@ function spawnFirefly() {
   firefly.animate([
     { 
       top: '100vh', 
-      left: `${random(0, 100)}vw`, 
+      left: `${random(5, 95)}vw`, 
       opacity: 0 
     },
     { 
-      top: '80vh', 
-      left: `${random(0, 100)}vw`, 
+      top: '30vh', 
+      left: `${random(5, 95)}vw`, 
       opacity: 1 
     },
     { 
-      top: '95vh', 
-      left: `${random(0, 100)}vw`, 
+      top: '5vh', 
+      left: `${random(5, 95)}vw`, 
       opacity: 0 
     }
   ], {
