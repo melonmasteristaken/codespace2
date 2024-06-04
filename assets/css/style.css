@@ -90,17 +90,7 @@ h4 {
 
 /* --- --- ------------ --- --- */
 
-@media (min-width: 768px) and (max-width: 1280px) {
-  /* styles here will only apply to desktop screens */
-  .homebutton {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    z-index: 999;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 767px){
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .homebutton {
     position: absolute;
     top: 70%;
@@ -118,7 +108,7 @@ h4 {
   }
 } /* Mobile*/
 
-@media (min-width: 1024px) and (max-width: 1440px) and (min-resolution: 100dpi) {
+@media screen and (min-width: 1024px) {
   /* styles here will target laptops */
   .homebutton {
     position: absolute;
