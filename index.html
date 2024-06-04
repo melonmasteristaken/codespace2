@@ -15,8 +15,7 @@ html {
   height: 100vh;
 }
 
-.fireflies::before {
-  content: "";
+.firefly {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -27,39 +26,6 @@ html {
   border-radius: 50%;
   box-shadow: 0 0 10px #ffff00; /* Glow effect */
   animation: firefly 2s infinite;
-  /* Add randomness */
-  top: calc(50% + #{random(-200, 200)}px);
-  left: calc(50% + #{random(-200, 200)}px);
-  animation-delay: #{random(0.1, 2)}s;
-}
-
-.fireflies::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background-color: #ffff00; /* Yellow glow */
-  border-radius: 50%;
-  box-shadow: 0 0 10px #ffff00; /* Glow effect */
-  animation: firefly 2s infinite;
-  /* Add randomness */
-  top: calc(50% + #{random(-200, 200)}px);
-  left: calc(50% + #{random(-200, 200)}px);
-  animation-delay: #{random(2, 4)}s;
-}
-
-/* Add more ::before and ::after elements to generate more fireflies */
-
-@keyframes firefly {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-  100% {
-    transform: translate(calc(-50% + #{random(-20, 20)}px), calc(-50% + #{random(-20, 20)}px));
-  }
 }
 </style>
 
