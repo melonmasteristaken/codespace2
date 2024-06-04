@@ -151,19 +151,10 @@ h4 {
     z-index: 1000;
 }
 
-/* Style the play button */
+/* Hide all controls except the play button */
 audio::-webkit-media-controls-panel {
     background-color: transparent;
     border-radius: 50%;
-}
-
-audio::-webkit-media-controls-play-button,
-audio::-webkit-media-controls-timeline,
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display,
-audio::-webkit-media-controls-mute-button,
-audio::-webkit-media-controls-volume-slider {
-    display: none;
 }
 
 audio::-webkit-media-controls-play-button {
@@ -173,4 +164,12 @@ audio::-webkit-media-controls-play-button {
     width: 30px;
     background: #000;
     border-radius: 50%;
+}
+
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider {
+    display: none;
 }
