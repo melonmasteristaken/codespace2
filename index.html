@@ -39,22 +39,7 @@ html {
 <a class="button homebutton" href="/start">[Start Experience]</a>
 <div class="fireflies"></div>
 
-<audio id="background-audio" loop> 
+<audio id="background-audio" controls loop> 
   <source src="assets/sounds/starlight-night.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var audio = document.getElementById('background-audio');
-    var playPromise = audio.play();
-    
-    if (playPromise !== undefined) {
-      playPromise.then(function() {
-        console.log('Audio started successfully');
-      }).catch(function(error) {
-        console.log('Failed to start audio:', error);
-      });
-    }
-  });
-</script>
