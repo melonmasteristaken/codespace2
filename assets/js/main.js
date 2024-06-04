@@ -22,7 +22,7 @@ function spawnFirefly() {
       opacity: 0 
     }
   ], {
-    duration: 3000, // 3 seconds
+    duration: 1000, // 3 seconds
     easing: 'ease-out',
     fill: 'forwards' // Keep the final state
   });
