@@ -1,2 +1,2 @@
-# luminaura.github.io
+# Luminaura
 {Luminous Parallax Wonderland}
