@@ -151,7 +151,7 @@ h4 {
   appearance: none;
 }
 
-/*#audio-circle::before {
+#audio-circle::before {
   content: "\25B6";
   position: absolute;
   top: 50%;
@@ -159,4 +159,4 @@ h4 {
   transform: translate(-50%, -50%);
   font-size: 20px;
   color: #666;
-}*/
+}
