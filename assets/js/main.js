@@ -7,7 +7,7 @@ function spawnFirefly() {
   firefly.classList.add('firefly');
 
   // Random position, opacity, and scale
-  firefly.style.top = `${random(5, 95)}vh`;
+  firefly.style.top = `${random(5, 20)}vh`;
   firefly.style.left = `${random(5, 95)}vw`;
   firefly.style.opacity = 0;
   firefly.style.transform = `scale(${random(0.5, 1.0)})`;
@@ -24,7 +24,7 @@ function spawnFirefly() {
   // Move and fade-out animation
 firefly.animate([
   { 
-    top: `${random(5, 95)}vh`, 
+    top: `${random(80, 95)}vh`, 
     left: `${random(5, 95)}vw`, 
     opacity: 1 
   },
