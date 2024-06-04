@@ -1,6 +1,6 @@
 //main.js
 
-
+console.log("main.js active")
 
 
 //............................................................................................................
@@ -9,11 +9,14 @@
 
 //install-sw.js
 const registerServiceWorker = async () => {
+  console.log("noError1")
   if ("serviceWorker" in navigator) {
+    console.log("noError2")
     try {
       const registration = await navigator.serviceWorker.register("/sw.js", {
         scope: "/",
       });
+      console.log("noError3")
       if (registration.installing) {
         console.log("Service worker installing");
       } else if (registration.waiting) {
@@ -32,6 +35,7 @@ navigator.serviceWorker.getRegistrations().then(registrations => {
   if (registrations.length > 0) {
     // Show the modal notification
     showOfflineNotification();
+     console.log("noError4")
   }
 });
 
