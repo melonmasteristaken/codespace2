@@ -72,7 +72,7 @@ h4 {
   .homebutton {
     position: absolute;
     top: 70%;
-    left: 53%;
+    left: 60%;
     z-index: 999;
   }
 } /* Desktop */
