@@ -41,7 +41,7 @@ navigator.serviceWorker.getRegistrations().then(registrations => {
   }
 });
 
-
+registerServiceWorker();
 
 //---
 
