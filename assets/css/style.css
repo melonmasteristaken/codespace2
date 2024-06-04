@@ -1,4 +1,4 @@
-.p {
+p {
   font-family: "MuseoModerno", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -6,7 +6,7 @@
   color: #ffffff;
 }
 
-.h1 {
+h1 {
   font-family: "MuseoModerno", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -14,7 +14,7 @@
   color: #ffffff;
 }
 
-.h2 {
+h2 {
   font-family: "MuseoModerno", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -22,7 +22,7 @@
   color: #ffffff;
 }
 
-.h3 {
+h3 {
   font-family: "MuseoModerno", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -30,7 +30,7 @@
   color: #ffffff;
 }
 
-.h4 {
+h4 {
   font-family: "MuseoModerno", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
