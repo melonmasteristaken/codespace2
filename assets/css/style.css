@@ -73,18 +73,20 @@ h4 {
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 100px solid rgba(255, 255, 255, 0.5); /* white with 50% opacity */
+    border-top: 50px solid rgba(255, 255, 255, 0.7);
     animation: animateTriangle 2s infinite;
- }
+    margin: 0 auto;
+    display: block;
+}
 
- @keyframes animateTriangle {
+@keyframes animateTriangle {
     0% {
         transform: translateY(0);
     }
     100% {
         transform: translateY(20px);
     }
- }
+}
 
 /* --- --- ------------ --- --- */
 
@@ -93,12 +95,6 @@ h4 {
     position: absolute;
     top: 70%;
     left: 63%;
-    z-index: 999;
-  }
-  .hometriangle {
-    position: absolute;
-    top: 70%;
-    left: 55%;
     z-index: 999;
   }
 } /* Desktop */
@@ -110,12 +106,6 @@ h4 {
     left: 42%;
     z-index: 999;
   }
-  .hometriangle {
-    position: absolute;
-    top: 70%;
-    left: 37%;
-    z-index: 999;
-  }
 } /* tablet */
 
 @media screen and (max-width: 480px){
@@ -123,12 +113,6 @@ h4 {
     position: absolute;
     top: 70%;
     left: 35%;
-    z-index: 999;
-  }
-  .hometriangle {
-    position: absolute;
-    top: 70%;
-    left: 30%;
     z-index: 999;
   }
 } /* Mobile*/
