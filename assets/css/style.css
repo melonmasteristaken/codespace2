@@ -137,53 +137,24 @@ h4 {
   display: none; /* Hide by default */
 }
 
-/* Hide all controls except the play button */
-audio::-webkit-media-controls-panel {
-    display: none !important;
+#audio-circle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-audio::-webkit-media-controls-play-button {
-    display: block !important;
-    margin: auto;
-    width: 60px;
-    height: 60px;
-    background-color: #000;
-    border-radius: 50%;
-    padding: 10px;
-}
-
-#background-audio {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: transparent;
-    z-index: 1000;
-    border: none; /* Remove border to hide the player box */
-    outline: none; /* Remove default outline */
-}
-
-
-/* Hide all controls except the play button */
-audio::-webkit-media-controls-panel {
-    background-color: transparent;
-    border-radius: 50%;
-}
-
-audio::-webkit-media-controls-play-button {
-    display: block;
-    margin: auto;
-    height: 30px;
-    width: 30px;
-    background: #000;
-    border-radius: 50%;
-}
-
-audio::-webkit-media-controls-timeline,
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display,
-audio::-webkit-media-controls-mute-button,
-audio::-webkit-media-controls-volume-slider {
-    display: none;
+#audio-circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #666;
 }
