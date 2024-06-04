@@ -49,19 +49,20 @@ registerServiceWorker();
 
 
 //audio.js
-const soundtrackButton = document.getElementById('soundtrack-button');
+const soundButton = document.getElementById('soundButton');
+const soundtrack = document.getElementById('soundtrack');
 
-soundtrackButton.addEventListener('click', () => {
-  const soundtrackId = soundtrackButton.dataset.soundtrack;
-  const soundtrackUrl = `assets/sounds/${soundtrackId}.mp3`;
-
-  const soundtrack = new Howl({
-    src: [soundtrackUrl],
-    loop: true,
-    volume: 0.5,
-  });
-  soundtrack.play();
+soundButton.addEventListener('click', () => {
+    if (soundtrack.paused) {
+        soundtrack.play();
+        soundButton.innerHTML = '<i class="fas fa-pause"></i>';
+    } else {
+        soundtrack.pause();
+        soundtrack.currentTime = 0;
+        soundButton.innerHTML = '<i class="fas fa-play"></i>';
+    }
 });
+
 
 
 //---
