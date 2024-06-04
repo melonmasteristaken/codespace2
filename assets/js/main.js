@@ -12,17 +12,17 @@ function spawnFirefly() {
       opacity: 0 
     },
     { 
-      top: '0vh', 
+      top: '80vh', 
       left: `${random(0, 100)}vw`, 
       opacity: 1 
     },
     { 
-      top: '0vh', 
+      top: '95vh', 
       left: `${random(0, 100)}vw`, 
       opacity: 0 
     }
   ], {
-    duration: 1000, // 3 seconds
+    duration: 4000, // 3 seconds
     easing: 'ease-out',
     fill: 'forwards' // Keep the final state
   });
