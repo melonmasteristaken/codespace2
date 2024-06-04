@@ -8,21 +8,21 @@ function spawnFirefly() {
   firefly.animate([
     { 
       top: '100vh', 
-      left: `${random(5, 95)}vw`, 
+      left: `${random(10, 90)}vw`, 
       opacity: 0 
     },
     { 
       top: '30vh', 
-      left: `${random(5, 95)}vw`, 
+      left: `${random(10, 90)}vw`, 
       opacity: 1 
     },
     { 
-      top: '5vh', 
-      left: `${random(5, 95)}vw`, 
+      top: '10vh', 
+      left: `${random(10, 90)}vw`, 
       opacity: 0 
     }
   ], {
-    duration: 4000, // 3 seconds
+    duration: 7000, // 7 seconds
     easing: 'ease-out',
     fill: 'forwards' // Keep the final state
   });
