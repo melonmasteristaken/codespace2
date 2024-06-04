@@ -147,10 +147,12 @@ h4 {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 #audio-circle::before {
-  content: "";
+  content: "\25B6";
   position: absolute;
   top: 50%;
   left: 50%;
