@@ -5,66 +5,41 @@ description: Luminous Parallax Wonderland
 ---
 
 <style>
+html {
+  background-color: #263659;
+}
+  
 .fireflies {
   position: relative;
   width: 100%;
   height: 100vh;
-}
-
-.fireflies::before,
-.fireflies::after,
-.fireflies::before:nth-child(3),
-.fireflies::after:nth-child(3),
-.fireflies::before:nth-child(4),
-.fireflies::after:nth-child(4),
-.fireflies::before:nth-child(5),
-.fireflies::after:nth-child(5) {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-  animation: fly 5s infinite;
+  background-color: #222; /* Dark background */
 }
 
 .fireflies::before {
-  --x: 20px;
-  --y: 50px;
-  --delay: 0.5s;
+  content: "";
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  background: radial-gradient(ellipse at center, #ffcc00 50%, #ffff00 50%);
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #ffff00; /* Yellow glow */
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffff00; /* Glow effect */
+  animation: firefly 2s infinite;
+  /* Add randomness */
+  top: calc(50% + #{random(-200, 200)}px);
+  left: calc(50% + #{random(-200, 200)}px);
+  animation-delay: #{random(0, 2)}s;
 }
 
-.fireflies::after {
-  --x: 80px;
-  --y: 20px;
-  --delay: 1.5s;
-  left: 50%;
-  transform: translateX(-50%);
-  background: radial-gradient(ellipse at center, #ffcc00 50%, #ffff00 50%);
-}
-
-/* Add more fireflies and adjust their styles */
-
-@keyframes fly {
+@keyframes firefly {
   0% {
-    transform: translateY(var(--y)) translateX(var(--x));
-    opacity: 0;
+    transform: translate(-50%, -50%);
   }
   100% {
-    transform: translateY(-100px) translateX(var(--x));
-    opacity: 1;
-  }
-}
-
-@keyframes trail {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(255, 204, 0, 0);
+    transform: translate(calc(-50% + #{random(-20, 20)}px), calc(-50% + #{random(-20, 20)}px));
   }
 }
 </style>
