@@ -137,16 +137,22 @@ h4 {
   display: none; /* Hide by default */
 }
 
-#soundtrack-button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+.soundbutton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    color: #fff;
 }
 
-#soundtrack-button::before {
-  content: "\25B6";
-  margin-right: 10px;
+.soundbutton:hover {
+    background-color: #555;
 }
