@@ -15,6 +15,36 @@
     </main>
 
     <script src="https://luminaura.github.io/assets/js/main.js"></script>
+    <script>
+      //install-sw.js
+      const registerServiceWorker = async () => {
+      if ("serviceWorker" in navigator) {
+        try {
+          const registration = await navigator.serviceWorker.register("/sw.js", {
+            scope: "/",
+          });
+          if (registration.installing) {
+            console.log("Service worker installing");
+          } else if (registration.waiting) {
+            console.log("Service worker installed");
+          } else if (registration.active) {
+            console.log("Service worker active");
+          }
+        } catch (error) {
+          console.error(`Registration failed with ${error}`);
+        }
+      }
+    };
+
+    // Check if a service worker is installed
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+     if (registrations.length > 0) {
+        // Show the modal notification
+        showOfflineNotification();
+      }
+    });
+
+    </script>
     
   </body>
   
