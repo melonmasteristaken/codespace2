@@ -137,26 +137,16 @@ h4 {
   display: none; /* Hide by default */
 }
 
-#audio-circle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+#soundtrack-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
 }
 
-#audio-circle::before {
+#soundtrack-button::before {
   content: "\25B6";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  color: #666;
+  margin-right: 10px;
 }
