@@ -94,7 +94,7 @@ function showOfflineNotification() {
 }
 
 // Call the function when the page loads
-window.addEventListener("load", showOfflineNotification);
+//window.addEventListener("load", showOfflineNotification);
 
 
 //------------------------------------------------------------------------------------------------------------
