@@ -22,22 +22,22 @@ function spawnFirefly() {
   });
 
   // Move and fade-out animation
-  firefly.animate([
-    { 
-      top: `${random(5, 95)}vh`, 
-      left: `${random(5, 95)}vw`, 
-      opacity: 1 
-    },
-    { 
-      top: `${random(5, 95)}vh`, 
-      left: `${random(5, 95)}vw`, 
-      opacity: 0 
-    }
-  ], {
-    duration: 1700, // 3 seconds
-    easing: 'ease-out',
-    delay: 700 // Delay fade-out by 1 second
-  });
+firefly.animate([
+  { 
+    top: `${random(5, 95)}vh`, 
+    left: `${random(5, 95)}vw`, 
+    opacity: 1 
+  },
+  { 
+    top: `${random(0, 100)}vh + Math.sin(Math.random() * 10) * 20`, 
+    left: `${random(0, 100)}vw + Math.cos(Math.random() * 10) * 20`, 
+    opacity: 0 
+  }
+], {
+  duration: 1700, // 3 seconds
+  easing: 'ease-out',
+  delay: 700 // Delay fade-out by 1 second
+});
 
   // Remove firefly after animation
   firefly.addEventListener('animationend', () => {
