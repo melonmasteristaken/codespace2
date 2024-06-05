@@ -1,0 +1,117 @@
+---
+layout: default
+title: Luminaura
+---
+
+<style>
+.parallax-container {
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateZ(0);
+  transition: transform 0.5s ease-out;
+}
+
+.parallax-layer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transform: translateZ(-1px);
+}
+
+.parallax-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+
+<div class="parallax-container">
+  <div class="parallax-layer" data-speed="0.5" data-x="0" data-y="0">
+    <img src="layer1.jpg" alt="Layer 1">
+  </div>
+  <div class="parallax-layer" data-speed="1.2" data-x="0" data-y="0">
+    <img src="layer2.jpg" alt="Layer 2">
+  </div>
+  <div class="parallax-layer" data-speed="2.5" data-x="0" data-y="0">
+    <img src="layer3.jpg" alt="Layer 3">
+  </div>
+</div>
+
+<script>
+const parallaxContainer = document.querySelector(".parallax-container");
+const parallaxLayers = document.querySelectorAll(".parallax-layer");
+
+parallaxContainer.addEventListener("mousemove", (event) => {
+  const x = event.clientX / window.innerWidth;
+  const y = event.clientY / window.innerHeight;
+
+  parallaxLayers.forEach((layer, index) => {
+    const speed = layer.dataset.speed;
+    const xPosition = layer.dataset.x;
+    const yPosition = layer.dataset.y;
+    const translateX = x * speed + xPosition;
+    const translateY = y * speed + yPosition;
+
+    layer.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
+  });
+});
+
+parallaxContainer.addEventListener("mouseleave", () => {
+  parallaxLayers.forEach((layer) => {
+    layer.style.transform = `translateX(0px) translateY(0px)`;
+  });
+});
+
+let lastX = 0;
+let lastY = 0;
+parallaxContainer.addEventListener("mousemove", (event) => {
+  const x = event.clientX / window.innerWidth;
+  const y = event.clientY / window.innerHeight;
+  const dx = x - lastX;
+  const dy = y - lastY;
+  lastX = x;
+  lastY = y;
+
+  parallaxLayers.forEach((layer, index) => {
+    const speed = layer.dataset.speed;
+    const xPosition = layer.dataset.x;
+    const yPosition = layer.dataset.y;
+    const translateX = x * speed + xPosition + dx * speed;
+    const translateY = y * speed + yPosition + dy * speed;
+
+    layer.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
+  });
+});
+
+function easeOutQuart(x) {
+  return 1 - (1 - x) * (1 - x) * (1 - x) * (1 - x);
+}
+
+parallaxContainer.addEventListener("mousemove", (event) => {
+  const x = event.clientX / window.innerWidth;
+  const y = event.clientY / window.innerHeight;
+
+  parallaxLayers.forEach((layer, index) => {
+    const speed = layer.dataset.speed;
+    const xPosition = layer.dataset.x;
+    const yPosition = layer.dataset.y;
+    const translateX = easeOutQuart(x) * speed + xPosition;
+    const translateY = easeOutQuart(y) * speed + yPosition;
+
+    layer.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
+  });
+});
+</script>
