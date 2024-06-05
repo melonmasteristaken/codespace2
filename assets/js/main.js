@@ -58,7 +58,7 @@ soundButton.addEventListener('click', () => {
         soundButton.innerHTML = '<i class="fas fa-pause"></i>';
     } else {
         soundtrack.pause();
-        soundtrack.currentTime = 0;
+        //soundtrack.currentTime = 0;
         soundButton.innerHTML = '<i class="fas fa-play"></i>';
     }
 });
