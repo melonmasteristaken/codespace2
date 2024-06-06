@@ -129,6 +129,15 @@ h4 {
   }
 }
 
+@media only screen and (max-width: 520px) {
+  /* styles here will apply to regular mobile devices */
+  .homebutton {
+    width: 90%;
+    top: 40%;
+    left: 5%;
+  }
+}
+
 /* Style the modal notification */
 .modal-notification {
   position: fixed;
