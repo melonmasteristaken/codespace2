@@ -3,10 +3,7 @@ layout: default
 title: Luminaura
 ---
 
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/meilisearch-docsearch@latest/dist/index.css"
-/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
 
 <style>
 .project-grid {
@@ -89,14 +86,15 @@ height: 100px;
 </div>
 
 
-
-<script src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"></script>
 <script>
-  const { docsearch } = window.__docsearch_meilisearch__;
-  docsearch({
-    container: "#docsearch",
-    host: "YOUR_HOST_URL",
-    apiKey: "YOUR_SEARCH_API_KEY",
-    indexUid: "YOUR_INDEX_UID",
-  });
+import docsearch from '@docsearch/js';
+
+import '@docsearch/css';
+
+docsearch({
+  container: '#docsearch',
+  appId: 'luminaura',
+  indexName: 'Parallax_Search',
+  apiKey: '123456',
+});
 </script>
