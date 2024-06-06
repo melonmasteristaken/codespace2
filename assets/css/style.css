@@ -75,9 +75,9 @@ h4 {
 
 .homebutton {
   position: absolute;
-  width: 7%;
+  width: 10%;
   top: 70%;
-  left: 57%;
+  left: 45%;
   z-index: 999;
 }
 
