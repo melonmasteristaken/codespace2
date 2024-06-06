@@ -99,7 +99,7 @@ h4 {
   .homebutton {
     position: absolute;
     top: 70%;
-    left: 35%;
+    left: 30%;
     z-index: 999;
   }
 }/* tablet */
