@@ -73,6 +73,14 @@ h4 {
   background-color: #65738a;
 }
 
+.homebutton {
+  position: absolute;
+  width: 7%;
+  top: 70%;
+  left: 57%;
+  z-index: 999;
+}
+
 .hometriangle {
   width: 0;
   height: 0;
@@ -95,14 +103,14 @@ h4 {
 
 /* --- --- ------------ --- --- */
 
-@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+/* @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
   .homebutton {
     position: absolute;
     top: 70%;
     left: 30%;
     z-index: 999;
   }
-}/* tablet */
+}
 
 @media screen and (max-width: 480px){
   .homebutton {
@@ -111,17 +119,16 @@ h4 {
     left: 29%;
     z-index: 999;
   }
-} /* Mobile*/
+} 
 
 @media screen and (min-width: 1024px) {
-  /* styles here will target laptops */
   .homebutton {
     position: absolute;
     top: 70%;
     left: 44%;
     z-index: 999;
   }
-}
+} */
 
 /* Style the modal notification */
 .modal-notification {
