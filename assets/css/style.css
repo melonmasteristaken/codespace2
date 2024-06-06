@@ -74,24 +74,12 @@ h4 {
   background-color: #65738a;
 }
 
-/*.homebutton {
+.homebutton {
   position: absolute;
   top: 70%;
   left: 50%;
   transform: translateX(-50%);
   width: 30%;
-  z-index: 999;
-}*/
-
-.homebutton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%; /* Adjust this value to your liking */
-  padding: 10px 15px;
-  top: 50%; /* Relative to the button's own height */
-  left: 50%; /* Relative to the button's own width */
-  transform: translateX(-50%) translateY(-50%);
   z-index: 999;
 }
 
