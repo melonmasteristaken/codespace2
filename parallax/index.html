@@ -3,6 +3,11 @@ layout: default
 title: Luminaura
 ---
 
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/meilisearch-docsearch@latest/dist/index.css"
+/>
+
 <style>
 .project-grid {
 display: grid;
@@ -82,3 +87,16 @@ height: 100px;
   </div>
   <!-- Repeat for each project -->
 </div>
+
+
+
+<script src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"></script>
+<script>
+  const { docsearch } = window.__docsearch_meilisearch__;
+  docsearch({
+    container: "#docsearch",
+    host: "YOUR_HOST_URL",
+    apiKey: "YOUR_SEARCH_API_KEY",
+    indexUid: "YOUR_INDEX_UID",
+  });
+</script>
