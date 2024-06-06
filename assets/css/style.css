@@ -76,6 +76,7 @@ h4 {
 
 .homebutton {
   position: absolute;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
   width: 30%;
