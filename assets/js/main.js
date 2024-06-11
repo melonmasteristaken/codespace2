@@ -137,39 +137,29 @@ function showOfflineNotification() {
 
 //load-more.js
 
-document.addEventListener('DOMContentLoaded', function() {
-    const loadMoreButton = document.getElementById('load-more');
-    const projectEntries = document.querySelectorAll('.project-entry');
-    const projectsPerLoad = 3;
-    let currentIndex = 0;
+const projectEntries = document.querySelectorAll('.project-entry');
+const loadMoreButton = document.getElementById('load-more');
 
-    function hideInitialProjects() {
-        projectEntries.forEach((entry, index) => {
-            if (index >= projectsPerLoad) {
-                entry.style.display = 'none';
-            }
-        });
+let visibleProjects = 6;
+
+function showMoreProjects() {
+  for (let i = visibleProjects; i < visibleProjects + 6; i++) {
+    if (projectEntries[i]) {
+      projectEntries[i].style.visibility = 'visible';
     }
+  }
+  visibleProjects += 6;
 
-    function showProjects() {
-        for (let i = currentIndex; i < currentIndex + projectsPerLoad; i++) {
-            if (projectEntries[i]) {
-                projectEntries[i].style.display = 'block';
-            }
-        }
-        currentIndex += projectsPerLoad;
+  if (visibleProjects >= projectEntries.length) {
+    loadMoreButton.style.display = 'none';
+  }
+}
 
-        if (currentIndex >= projectEntries.length) {
-            loadMoreButton.style.display = 'none';
-        }
-    }
+loadMoreButton.addEventListener('click', showMoreProjects);
 
-    loadMoreButton.addEventListener('click', showProjects);
+// Show the first 6 project entries
+showMoreProjects();
 
-    // Initially hide projects beyond the first set
-    hideInitialProjects();
-});
-});
 
 //---
 
