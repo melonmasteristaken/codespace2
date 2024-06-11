@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initially hide projects beyond the first set
     hideInitialProjects();
 });
+});
 
 //---
 
