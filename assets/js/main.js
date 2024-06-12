@@ -137,7 +137,7 @@ function showOfflineNotification() {
 
 //load-more.js
 
-document.addEventListener('DOMContentLoaded', function(){
+/*document.addEventListener('DOMContentLoaded', function(){
   const projectEntries = document.querySelectorAll('.project-entry');
   const loadMoreButton = document.getElementById('load-more');
 
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function(){
       showMoreProjects();
     });
 
-});
+});*/
 
 
 
