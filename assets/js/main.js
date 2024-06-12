@@ -155,11 +155,12 @@ document.addEventListener('DOMContentLoaded', function(){
   //    loadMoreButton.style.display = 'none';
   //  }
   //}
+    loadMoreButton.addEventListener('click', function(){
+      showMoreProjects();
+    });
 
-  loadMoreButton.addEventListener('click', showMoreProjects);
-
-  showMoreProjects();
 });
+
 
 
 //---
