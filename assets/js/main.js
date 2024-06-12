@@ -151,10 +151,10 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     visibleProjects += 6;
 
-    if (visibleProjects >= projectEntries.length) {
-      loadMoreButton.style.display = 'none';
-    }
-  }
+  //  if (visibleProjects >= projectEntries.length) {
+  //    loadMoreButton.style.display = 'none';
+  //  }
+  //}
 
   loadMoreButton.addEventListener('click', showMoreProjects);
 
