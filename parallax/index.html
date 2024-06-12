@@ -12,7 +12,6 @@ gap: 20px;
 }
 
 .project-entry {
-visibility: hidden;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -20,6 +19,10 @@ background-color: #3f4a70;
 border-radius: 5px;
 }
 
+.project-entry::not(.shown) {
+visibility: hidden;
+}
+  
 .project-entry img {
 width: 90%;
 height: 150px;
@@ -105,7 +108,7 @@ height: 100px;
   <!-- Repeat for each project -->
 </div>
 
-<button id="load-more">Load More</button>
+<button id="load-more button">Load More</button>
 
 <script>
 import docsearch from '@docsearch/js';
