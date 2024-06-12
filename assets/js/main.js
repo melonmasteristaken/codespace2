@@ -137,27 +137,29 @@ function showOfflineNotification() {
 
 //load-more.js
 
-const projectEntries = document.querySelectorAll('.project-entry');
-const loadMoreButton = document.getElementById('load-more');
+document.addEventListener('DOMContentLoaded', function(){
+  const projectEntries = document.querySelectorAll('.project-entry');
+  const loadMoreButton = document.getElementById('load-more');
 
-let visibleProjects = 0;
+  let visibleProjects = 0;
 
-function showMoreProjects() {
-  for (let i = visibleProjects; i < visibleProjects + 6; i++) {
-    if (projectEntries[i]) {
-      projectEntries[i].classList.add('shown');
+  function showMoreProjects() {
+    for (let i = visibleProjects; i < visibleProjects + 6; i++) {
+      if (projectEntries[i]) {
+        projectEntries[i].classList.add('shown');
+      }
+    }
+    visibleProjects += 6;
+
+    if (visibleProjects >= projectEntries.length) {
+      loadMoreButton.style.display = 'none';
     }
   }
-  visibleProjects += 6;
 
-  if (visibleProjects >= projectEntries.length) {
-    loadMoreButton.style.display = 'none';
-  }
-}
+  loadMoreButton.addEventListener('click', showMoreProjects);
 
-loadMoreButton.addEventListener('click', showMoreProjects);
-
-showMoreProjects();
+  showMoreProjects();
+});
 
 
 //---
