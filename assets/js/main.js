@@ -140,7 +140,7 @@ function showOfflineNotification() {
 const projectEntries = document.querySelectorAll('.project-entry');
 const loadMoreButton = document.getElementById('load-more');
 
-let visibleProjects = 6;
+let visibleProjects = 0;
 
 function showMoreProjects() {
   for (let i = visibleProjects; i < visibleProjects + 6; i++) {
@@ -157,12 +157,10 @@ function showMoreProjects() {
 
 loadMoreButton.addEventListener('click', showMoreProjects);
 
-// Show the first 6 project entries
-for (let i = 0; i < 6; i++) {
-  projectEntries[i].classList.add('shown');
-}
+showMoreProjects();
 
 
 //---
+
 
 //null.js
