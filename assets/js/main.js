@@ -145,7 +145,7 @@ let visibleProjects = 6;
 function showMoreProjects() {
   for (let i = visibleProjects; i < visibleProjects + 6; i++) {
     if (projectEntries[i]) {
-      projectEntries[i].style.visibility = 'visible';
+      projectEntries[i].classList.add('shown');
     }
   }
   visibleProjects += 6;
@@ -158,7 +158,9 @@ function showMoreProjects() {
 loadMoreButton.addEventListener('click', showMoreProjects);
 
 // Show the first 6 project entries
-showMoreProjects();
+for (let i = 0; i < 6; i++) {
+  projectEntries[i].classList.add('shown');
+}
 
 
 //---
