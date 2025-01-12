@@ -3,20 +3,20 @@
   "description": "Luminous Parallax Wonderland",
   "dir": "ltr",
   "display": "standalone",
-  "name": "Luminaura",
+  "name": "codespace",
   "orientation": "any",
   "scope": "/",
-  "short_name": "Luminaura",
+  "short_name": "codespace",
   "start_url": "/",
   "theme_color": "#151924",
   "icons": [
     {
-      "src": "https://luminaura.github.io/assets/icon.png",
+      "src": "https://melonmasteristaken.github.io/codespace2/assets/codespace.jpg",
       "type": "image/png",
       "sizes": "446x446"
     }
   ],
-  "id": "1DSTLuminaura",
+  "id": "codes",
   "lang": "en",
   "display_override": [
     "fullscreen",
